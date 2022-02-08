@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
+import Category from './components/Category';
 
 function App() {
   return (
-    <p>
-      Cleanedup React App
-    </p>
+    <div>
+      <Category title='Rent' />
+      <Category title='Savings' />
+    </div>
   );
 }
 

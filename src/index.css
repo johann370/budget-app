@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.category {
+    justify-items: center;
+    text-align: center;
+    width: 20rem;
+    height: 15rem;
+    border: 2px solid black;
+}
+
+.category h1 {
+    font-size: 35pt;
+}
+
+.category p {
+    position: relative;
+    font-size: 40pt;
+    height: 50%;
+    line-height: 200%;
+}
+
+.category div {
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+}
+
+.category div * {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.category div button {
+    border: 1px solid black;
+    border-radius: 10%;
+    width: 2rem;
+    font-weight: bold;
+    font-size: 17pt;
+}
+
+.minus {
+    color: rgb(228, 6, 6);
+}
+
+.plus {
+    color: rgb(8, 207, 85);
+}
