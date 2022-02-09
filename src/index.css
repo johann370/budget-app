@@ -48,3 +48,11 @@
 .plus {
     color: rgb(8, 207, 85);
 }
+
+.budget {
+    text-align: center;
+    height: 20rem;
+    width: 30rem;
+    font-size: 1rem;
+    border: 3px solid black;
+}

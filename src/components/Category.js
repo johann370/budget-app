@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-const Category = ({ title }) => {
+const Category = ({ title, expenses, setExpenses }) => {
     const [amount, setAmount] = useState(0);
-    const [input, setInput] = useState();
+    const [input, setInput] = useState('');
     return <div className='category'>
         <h1>{title}</h1>
         <p>${amount}</p>
@@ -11,7 +11,14 @@ const Category = ({ title }) => {
             <button className='minus'>-</button>
             <form onSubmit={(e) => {
                 e.preventDefault();
-                setAmount(input);
+
+                if (input === '') {
+                    return;
+                } else {
+                    var diff = input - amount;
+                    setAmount(input);
+                    setExpenses(expenses + diff);
+                }
             }}>
                 <input type='number' inputMode='numeric' value={input} onChange={(e) => setInput(e.target.value)} />
             </form>

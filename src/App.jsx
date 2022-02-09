@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import Category from './components/Category';
+import Budget from './components/Budget';
+import Categories from './components/Categories';
 
 function App() {
+  const [expenses, setExpenses] = useState(0);
   return (
     <div>
-      <Category title='Rent' />
-      <Category title='Savings' />
+      <Budget expenses={expenses} />
+      <Categories expenses={expenses} setExpenses={setExpenses} />
     </div>
   );
 }
