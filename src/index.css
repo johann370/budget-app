@@ -40,6 +40,7 @@
     width: 2rem;
     font-weight: bold;
     font-size: 17pt;
+    cursor: pointer;
 }
 
 .minus {
@@ -61,4 +62,5 @@
 .delete-btn {
     position: absolute;
     right: 0;
+    cursor: pointer;
 }
