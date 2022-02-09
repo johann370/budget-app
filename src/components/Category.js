@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-const Category = ({ title, expenses, setExpenses }) => {
+const Category = ({ id, title, expenses, setExpenses, onDelete }) => {
     const [amount, setAmount] = useState(0);
     const [input, setInput] = useState('');
     return <div className='category'>
+        <button onClick={() => onDelete(id)} className='delete-btn'>Delete</button>
         <h1>{title}</h1>
         <p>${amount}</p>
         <div>
