@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
 import './App.css';
+import React, { useState } from 'react';
 import Budget from './components/Budget';
 import Categories from './components/Categories';
 import CreateCategory from './components/CreateCategory';
+import Navbar from './components/Navbar';
 
 function App() {
   const [expenses, setExpenses] = useState(0);
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <Budget expenses={expenses} remainingBudget={remainingBudget} setRemainingBudget={setRemainingBudget} totalBudget={totalBudget} setTotalBudget={setTotalBudget} />
       <CreateCategory categories={categories} setCategories={setCategories} />
       <Categories expenses={expenses} setExpenses={setExpenses} categories={categories} deleteCategory={deleteCategory} remainingBudget={remainingBudget} totalBudget={totalBudget} />

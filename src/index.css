@@ -3,6 +3,31 @@
     padding: 0;
 }
 
+.navbar{
+    overflow: hidden;
+}
+
+.navbar ul {
+    width: 100vw;
+    height: 6vh;
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+.navbar a {
+    cursor: pointer;
+    display: block;
+    font-size: 16pt;
+    height: 6vh;
+    line-height: 6vh;
+    padding: 0px 10px;
+}
+
+.navbar a:hover {
+    background-color: aqua;
+}
+
 .category {
     position: relative;
     justify-items: center;
