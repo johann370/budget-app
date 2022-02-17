@@ -1,10 +1,13 @@
 * {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
-.navbar{
-    overflow: hidden;
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navbar ul {
@@ -26,6 +29,49 @@
 
 .navbar a:hover {
     background-color: aqua;
+}
+
+.budget {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 25rem;
+    width: 50rem;
+    border: 3px solid black;
+    padding: 1rem;
+    margin: 1rem;
+    position: relative;
+    justify-content: space-evenly;
+}
+
+.budget h1, h2 {
+    font-size: 3rem;
+}
+
+.budget form {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 15pt;
+}
+
+.budget input {
+    width: 10rem;
+    height: 2rem;
+    text-align: center;
+    font-size: 15pt;
+}
+
+.categories {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    border-top: 2px solid black;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 .category {
@@ -74,14 +120,6 @@
 
 .plus {
     color: rgb(8, 207, 85);
-}
-
-.budget {
-    text-align: center;
-    height: 20rem;
-    width: 30rem;
-    font-size: 1rem;
-    border: 3px solid black;
 }
 
 .delete-btn {

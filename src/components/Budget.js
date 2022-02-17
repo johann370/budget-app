@@ -8,6 +8,14 @@ const Budget = ({ expenses, remainingBudget, setRemainingBudget, totalBudget, se
     }, [totalBudget, expenses]);
 
     return <div className='budget'>
+        <div>
+            <h1>Total Budget: </h1>
+            <h2>${totalBudget}</h2>
+        </div>
+        <div>
+            <h1>Remaining Budget: </h1>
+            <h2>${remainingBudget}</h2>
+        </div>
         <form onSubmit={(e) => {
             e.preventDefault();
             if (input === '' || isNaN(input)) {
@@ -18,12 +26,9 @@ const Budget = ({ expenses, remainingBudget, setRemainingBudget, totalBudget, se
                 setTotalBudget(input);
             }
         }}>
+            <label>Enter Budget:</label>
             <input value={input} type='number' placeholder='Enter budget' onChange={(e) => setInput(parseInt(e.target.value))} />
         </form>
-        <h1>Total Budget: </h1>
-        <h2>${totalBudget}</h2>
-        <h1>Remaining Budget: </h1>
-        <h2>${remainingBudget}</h2>
     </div>;
 };
 

@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className='content'>
       <Navbar />
       <Budget expenses={expenses} remainingBudget={remainingBudget} setRemainingBudget={setRemainingBudget} totalBudget={totalBudget} setTotalBudget={setTotalBudget} />
       <CreateCategory categories={categories} setCategories={setCategories} />
