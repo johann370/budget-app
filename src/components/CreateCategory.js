@@ -12,8 +12,8 @@ const CreateCategory = ({ categories, setCategories }) => {
     }
 
     return (
-        <div>
-            <input value={input} type='text' placeholder='Enter category name' onChange={(e) => { setInput(e.target.value) }} />
+        <div className='create-category'>
+            <input value={input} type='text' placeholder='Enter category' onChange={(e) => { setInput(e.target.value) }} />
             <button onClick={createCategory}>Create Category</button>
         </div>
     )

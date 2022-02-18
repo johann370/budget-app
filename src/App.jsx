@@ -2,8 +2,8 @@ import './App.css';
 import React, { useState } from 'react';
 import Budget from './components/Budget';
 import Categories from './components/Categories';
-import CreateCategory from './components/CreateCategory';
 import Navbar from './components/Navbar';
+import Controls from './components/Controls';
 
 function App() {
   const [expenses, setExpenses] = useState(0);
@@ -32,8 +32,10 @@ function App() {
   return (
     <div className='content'>
       <Navbar />
-      <Budget expenses={expenses} remainingBudget={remainingBudget} setRemainingBudget={setRemainingBudget} totalBudget={totalBudget} setTotalBudget={setTotalBudget} />
-      <CreateCategory categories={categories} setCategories={setCategories} />
+      <div className='flex-row'>
+        <Budget expenses={expenses} remainingBudget={remainingBudget} setRemainingBudget={setRemainingBudget} totalBudget={totalBudget} setTotalBudget={setTotalBudget} />
+        <Controls categories={categories} setCategories={setCategories} expenses={expenses} setRemainingBudget={setRemainingBudget} totalBudget={totalBudget} setTotalBudget={setTotalBudget} />
+      </div>
       <Categories expenses={expenses} setExpenses={setExpenses} categories={categories} deleteCategory={deleteCategory} remainingBudget={remainingBudget} totalBudget={totalBudget} />
     </div>
   );
