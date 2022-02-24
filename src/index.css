@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .flex-row {
@@ -138,6 +138,16 @@
 
 .create-category input {
     margin-right: 5px;
+}
+
+.checkbox input {
+    width: 1rem;
+    height: 1rem;
+    margin-right: 3px;
+}
+
+.checkbox label {
+    font-size: 1.1rem;
 }
 
 .minus {

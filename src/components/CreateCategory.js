@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 
-const CreateCategory = ({ categories, setCategories }) => {
+const CreateCategory = ({ categories, setCategories, amount, setAmount }) => {
 
     const [input, setInput] = useState('');
+    const id = categories.length + 1;
 
     const createCategory = () => {
         if (input !== '') {
-            setCategories([...categories, { id: categories.length + 1, title: input }]);
+            setCategories([...categories, { id: id, title: input }]);
             setInput('');
+            setAmount({ ...amount, [id]: 0 });
         }
     }
 
